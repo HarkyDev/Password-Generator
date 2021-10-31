@@ -29,36 +29,42 @@ String.prototype.shuffle = function () {
   return a.join("");
 }
 
-var myArray = ["1","2","3","4","5","6","7","8","9","10"]
+var numberArray = ["1","2","3","4","5","6","7","8","9","10"]
 var smallLetters  = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var bigLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var symbols = ["!","£","$","%","^","&","*"] 
-///// values for charcters 
-var b = true
+///// values for lists
+var numberArrayValue = true
+var smallLettersValue = true
+var bigLettersValue = true
+var symbolsValue = true
+
+// empty array
 var password = []
-// myArray[Math.floor(Math.random()*myArray.length)]
+
+
 
 var v = 1
 var userLimit = prompt("enter how many items you would like in this loop")
 
 for (let v = 0; v < userLimit ; v++) {
-  if (b == true) {
-    var c = myArray[Math.floor(Math.random()*myArray.length)]
+  if (numberArrayValue == true) {
+    var c = numberArray[Math.floor(Math.random()*numberArray.length)]
         password.push(c);
         
     }
 
-  if (b == true) {
+  if (smallLettersValue == true) {
     var x = smallLetters[Math.floor(Math.random()*smallLetters.length)]
         password.push(x);
         
     }
-  if (b == true) {
+  if (bigLettersValue == true) {
     var z = bigLetters[Math.floor(Math.random()*bigLetters.length)]
         password.push(z);
         
     }
-    if (b == true) {
+    if (symbolsValue == true) {
       var y = symbols[Math.floor(Math.random()*symbols.length)]
           password.push(y);
           
@@ -70,13 +76,15 @@ console.log(password)
 
 var joinedPassword = password.join("")
 console.log(joinedPassword)
+
 var slicedPassword = joinedPassword.slice(0,userLimit)
 console.log(slicedPassword)
+
 var shuffledPassword = slicedPassword.shuffle()
 console.log(shuffledPassword)
 
 
-//cut off first
+//cut off 
 //randomize
 // done
 
