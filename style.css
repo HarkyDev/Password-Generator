@@ -42,6 +42,15 @@ header {
   padding: 30px 40px;
 }
 
+label{
+  margin-right: 30px;
+}
+.checkboxes{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: centre;
+}
 .card-header::after {
   content: " ";
   display: block;
