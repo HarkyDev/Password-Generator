@@ -82,19 +82,15 @@ var generatePassword = function() {
   var slicedPassword = joinedPassword.slice(0,userLimit)
   var shuffledPassword = slicedPassword.shuffle()
   console.log(shuffledPassword)
+
+
+  if (true == true) {
+    let displayPassword = shuffledPassword;
+    document.getElementById("password").innerHTML = displayPassword
+    }
 }
 
-var passwordOutcome = function() {
-  var joinedPassword = passwordArray.join("")
-  console.log(joinedPassword)
 
-  var slicedPassword = joinedPassword.slice(0,userLimit)
-  console.log(slicedPassword)
-
-  var shuffledPassword = slicedPassword.shuffle()
-  console.log(shuffledPassword)
-
-}
 
 
 
