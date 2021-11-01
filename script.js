@@ -53,55 +53,49 @@ var v = 1
 //switched off prompt to stop alert while editing css and  html    prompt("enter how many items you would like in this loop")
 var userLimit = 25
 
+
+
 var generatePassword = function() {
 
   for (let v = 0; v < userLimit ; v++) {
       if (numberArrayValue == true) {
           var c = numberArray[Math.floor(Math.random()*numberArray.length)]
-          passwordArray.push(c);
-          console.log(passwordArray)
-              
+          passwordArray.push(c);    
           }
 
       if (smallLettersValue == true) {
           var x = smallLetters[Math.floor(Math.random()*smallLetters.length)]
           passwordArray.push(x);
-          console.log(passwordArray)
-              
           }
       if (bigLettersValue == true) {
           var z = bigLetters[Math.floor(Math.random()*bigLetters.length)]
-          passwordArray.push(z);
-          console.log(passwordArray)
-              
+          passwordArray.push(z);   
           }
       if (symbolsValue == true) {
       var y = symbols[Math.floor(Math.random()*symbols.length)]
           passwordArray.push(y);
-          console.log(passwordArray)
           
-      }
-      var joinedPassword = passwordArray.join("")
-      console.log(joinedPassword)
-
-      var slicedPassword = joinedPassword.slice(0,userLimit)
-      console.log(slicedPassword)
-
-      var shuffledPassword = slicedPassword.shuffle()
-      console.log(shuffledPassword)
-      }
+          
+      }      
+  }
+  var joinedPassword = passwordArray.join("")
+  var slicedPassword = joinedPassword.slice(0,userLimit)
+  var shuffledPassword = slicedPassword.shuffle()
+  console.log(shuffledPassword)
 }
 
-console.log(passwordArray)
+var passwordOutcome = function() {
+  var joinedPassword = passwordArray.join("")
+  console.log(joinedPassword)
 
-var joinedPassword = passwordArray.join("")
-console.log(joinedPassword)
+  var slicedPassword = joinedPassword.slice(0,userLimit)
+  console.log(slicedPassword)
 
-var slicedPassword = joinedPassword.slice(0,userLimit)
-console.log(slicedPassword)
+  var shuffledPassword = slicedPassword.shuffle()
+  console.log(shuffledPassword)
 
-var shuffledPassword = slicedPassword.shuffle()
-console.log(shuffledPassword)
+}
+
 
 
 //cut off 
