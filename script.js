@@ -38,15 +38,15 @@ var createPassword = function() {
 
       if (smallLettersValue == true) {
           var x = smallLetters[Math.floor(Math.random()*smallLetters.length)]
-          passwordArray.push(x);
+          passwordArray.push(x);  
           }
       if (bigLettersValue == true) {
           var z = bigLetters[Math.floor(Math.random()*bigLetters.length)]
-          passwordArray.push(z);   
+          passwordArray.push(z);    
           }
       if (symbolsValue == true) {
       var y = symbols[Math.floor(Math.random()*symbols.length)]
-          passwordArray.push(y)  
+          passwordArray.push(y)    
       }      
   }
     var joinedPassword = passwordArray.join("")
@@ -59,7 +59,6 @@ var createPassword = function() {
 var UserLimitValidation = function() {
     if (userLimit > 8 && userLimit < 128){
         createPassword()
-        console.log ("this is passing")
         }
     else alert("we could not generate a new password as you did not choose between 8-128")
     
