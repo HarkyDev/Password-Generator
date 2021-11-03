@@ -42,20 +42,16 @@ var passwordArray = []
 var v = 1
 ///// values for lists
 
-var bigLettersValue = confirm("do you want upper case")
-var smallLettersValue = confirm("do you want lower case")
-var symbolsValue = confirm("do you want symbols")
-var numberArrayValue = confirm("do you want numbers")
-var userLimit = prompt("how many characters do you want? (8-128)")
+var getUserData = function() {
+    bigLettersValue = confirm("do you want upper case")
+    smallLettersValue = confirm("do you want lower case")
+    symbolsValue = confirm("do you want symbols")
+    numberArrayValue = confirm("do you want numbers")
+    userLimit = prompt("how many characters do you want? (8-128)")
+    
+}
 
-
-
-
-
-
-
-
-var generatePassword = function() {
+var createPassword = function() {
 
   for (let v = 0; v < userLimit ; v++) {
       if (numberArrayValue == true) {
@@ -73,22 +69,24 @@ var generatePassword = function() {
           }
       if (symbolsValue == true) {
       var y = symbols[Math.floor(Math.random()*symbols.length)]
-          passwordArray.push(y);
-          
-          
+          passwordArray.push(y)  
       }      
   }
-  var joinedPassword = passwordArray.join("")
-  var slicedPassword = joinedPassword.slice(0,userLimit)
-  var shuffledPassword = slicedPassword.shuffle()
-  console.log(shuffledPassword)
-
-
-  if (true == true) {
+    var joinedPassword = passwordArray.join("")
+    var slicedPassword = joinedPassword.slice(0,userLimit)
+    var shuffledPassword = slicedPassword.shuffle()
+    console.log(shuffledPassword)
     let displayPassword = shuffledPassword;
     document.getElementById("password").innerHTML = displayPassword
-    }
 }
+
+var generatePassword = function() {
+    getUserData();
+    createPassword();
+    
+    
+}
+
 
 
 
@@ -105,7 +103,6 @@ var generatePassword = function() {
 
 
 
-    
 
 
 
