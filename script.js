@@ -51,8 +51,11 @@ var getUserData = function() {
     
 }
 
-var createPassword = function() {
 
+
+
+var createPassword = function() {
+  
   for (let v = 0; v < userLimit ; v++) {
       if (numberArrayValue == true) {
           var c = numberArray[Math.floor(Math.random()*numberArray.length)]
@@ -80,11 +83,23 @@ var createPassword = function() {
     document.getElementById("password").innerHTML = displayPassword
 }
 
+
+
+var UserLimitValidation = function() {
+    if (userLimit > 8 && userLimit < 128){
+        createPassword()
+        console.log ("this is passing")
+        }
+    else alert("we could not generate a new password as you did not choose between 8-128")
+    
+}
+  
+
+
+  
 var generatePassword = function() {
     getUserData();
-    createPassword();
-    
-    
+    UserLimitValidation();
 }
 
 
