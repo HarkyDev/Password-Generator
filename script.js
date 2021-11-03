@@ -1,23 +1,5 @@
-// Assignment Code
-//var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-//function writePassword() {
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
-
-  //passwordText.value = password;
-
-//}
-
-// Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword)
-
-///////////////////////////////////////comented out default code as I would like to build from scratch and feel it is making it more complicated
-
-
-
-//Fisher-yates randomize function
+//// Fisher-yates randomize function
 String.prototype.shuffle = function () {
   var a = this.split(""),
       n = a.length;
@@ -30,18 +12,14 @@ String.prototype.shuffle = function () {
   }
   return a.join("");
 }
-
-////////// my code ///////////////////
-
-
+//// Arrays in use 
 var numberArray = ["1","2","3","4","5","6","7","8","9","10"]
 var smallLetters  = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var bigLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var symbols = ["!","£","$","%","^","&","*"] 
 var passwordArray = []
 var v = 1
-///// values for lists
-
+//// functions
 var getUserData = function() {
     bigLettersValue = confirm("do you want upper case")
     smallLettersValue = confirm("do you want lower case")
@@ -50,10 +28,6 @@ var getUserData = function() {
     userLimit = prompt("how many characters do you want? (8-128)")
     
 }
-
-
-
-
 var createPassword = function() {
   
   for (let v = 0; v < userLimit ; v++) {
@@ -82,9 +56,6 @@ var createPassword = function() {
     let displayPassword = shuffledPassword;
     document.getElementById("password").innerHTML = displayPassword
 }
-
-
-
 var UserLimitValidation = function() {
     if (userLimit > 8 && userLimit < 128){
         createPassword()
@@ -92,27 +63,15 @@ var UserLimitValidation = function() {
         }
     else alert("we could not generate a new password as you did not choose between 8-128")
     
-}
-  
-
-
-  
+} 
 var generatePassword = function() {
     getUserData();
     UserLimitValidation();
 }
 
+//this code is fully working as of 03/11/2021
 
 
-
-
-
-//cut off 
-//randomize
-// done
-
-
-//working as of sunday night need to figure out how to connect back and front end 
 
 
 
