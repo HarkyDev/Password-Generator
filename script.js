@@ -38,20 +38,20 @@ var numberArray = ["1","2","3","4","5","6","7","8","9","10"]
 var smallLetters  = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var bigLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var symbols = ["!","£","$","%","^","&","*"] 
-///// values for lists
-var numberArrayValue = true
-var smallLettersValue = true
-var bigLettersValue = true
-var symbolsValue = true
-
-// empty array
 var passwordArray = []
-
-
-
 var v = 1
-//switched off prompt to stop alert while editing css and  html    prompt("enter how many items you would like in this loop")
-var userLimit = 25
+///// values for lists
+
+var bigLettersValue = confirm("do you want upper case")
+var smallLettersValue = confirm("do you want lower case")
+var symbolsValue = confirm("do you want symbols")
+var numberArrayValue = confirm("do you want numbers")
+var userLimit = prompt("how many characters do you want? (8-128)")
+
+
+
+
+
 
 
 
