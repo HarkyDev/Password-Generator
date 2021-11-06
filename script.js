@@ -55,9 +55,12 @@ var createPassword = function() {
     console.log(shuffledPassword)
     let displayPassword = shuffledPassword;
     document.getElementById("password").innerHTML = displayPassword
+
+    if (shuffledPassword == "")
+        alert("You did not select any character types") 
 }
 var UserLimitValidation = function() {
-    if (userLimit > 8 && userLimit < 128){
+    if (userLimit >= 8 && userLimit <= 128){
         createPassword()
         }
     else alert("we could not generate a new password as you did not choose between 8-128")
