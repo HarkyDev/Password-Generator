@@ -13,7 +13,7 @@ String.prototype.shuffle = function () {
   return a.join("");
 }
 //// Arrays in use 
-var numberArray = ["1","2","3","4","5","6","7","8","9","10"]
+var numberArray = ["0","1","2","3","4","5","6","7","8","9"]
 var smallLetters  = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var bigLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var symbols = ["!","£","$","%","^","&","*"] 
@@ -21,11 +21,11 @@ var passwordArray = []
 var v = 1
 //// functions
 var getUserData = function() {
-    bigLettersValue = confirm("do you want upper case")
-    smallLettersValue = confirm("do you want lower case")
-    symbolsValue = confirm("do you want symbols")
-    numberArrayValue = confirm("do you want numbers")
-    userLimit = prompt("how many characters do you want? (8-128)")
+    bigLettersValue = confirm("Do you want upper case characters?")
+    smallLettersValue = confirm("Do you want lower case characters?")
+    symbolsValue = confirm("Do you want symbol characters?")
+    numberArrayValue = confirm("Do you want number characters?")
+    userLimit = prompt("How many characters long do you want your password to be? (8-128)")
     
 }
 var createPassword = function() {
